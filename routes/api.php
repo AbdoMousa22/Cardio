@@ -29,12 +29,12 @@ Route::controller(AdminController::class)->group(function(){
 });
 Route::controller(AuthController::class)->group(function(){
 
-  Route::post('doctor/register','register');
-  Route::post('doctor/login','login');
-  Route::post('doctor/logout','logout')->middleware('auth:doctor');
-  Route::post('doctor/delete','delete')->middleware('auth:sanctum');
-  Route::post('doctor/update','update')->middleware('auth:doctor');
-  Route::get ('doctor/view','view')    ->middleware('auth:admin');
+  Route::post('/doctor/register','register');
+  Route::post('/doctor/login','login');
+  Route::post('/doctor/logout','logout')->middleware('auth:doctor');
+  Route::post('/doctor/delete','delete')->middleware('auth:sanctum');
+  Route::post('/doctor/update','update')->middleware('auth:doctor');
+  Route::get ('/doctor/view','view')    ->middleware('auth:admin');
 
 });
 
