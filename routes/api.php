@@ -34,7 +34,7 @@ Route::controller(AuthController::class)->group(function(){
   Route::post('/doctor/logout','logout')->middleware('auth:doctor');
   Route::post('/doctor/delete','delete')->middleware('auth:sanctum');
   Route::post('/doctor/update','update')->middleware('auth:doctor');
-  Route::get ('/doctor/view','view')    ->middleware('auth:admin');
+  Route::get ('/doctor/view','view');
 
 });
 
