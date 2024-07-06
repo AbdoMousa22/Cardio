@@ -99,7 +99,7 @@ class AuthController extends Controller
         [
             'name'=>['required','string','max:255'],
             'email'=>['required','email','max:255','unique :'. Doctor::class],
-            'password'=>['required','confirmed',Rules\Password::defaults()],
+            'password'=>['required',Rules\Password::defaults()],
             'phone'=>['nullable','numeric','digits:11'],
 
         ]);
